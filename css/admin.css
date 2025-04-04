@@ -20,6 +20,11 @@
 .text-center{
     text-align: center;
 }
+
+.clear{
+    float: none;
+    clear: both;
+}
 /*CSS for Menu  */
  .menu{
     border-bottom: 1px solid gray;
@@ -44,8 +49,15 @@
 
 /* css for main content */
  .main-content{
-    margin: 1% 0;
-    background-color: #ffffff;
+background-color: #ffffff;
+padding: 3% 0;
+ }
+ .col-4{
+    width: 18%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
  }
 
 /* css for footer */
