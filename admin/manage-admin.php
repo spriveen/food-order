@@ -1,4 +1,6 @@
-<?php include('partials/menu.php'); ?>  
+<?php include('partials/menu.php'); ?> 
+
+ 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +25,13 @@
                 unset($_SESSION['add']); //removing the session message
                  
              }
+                if(isset($_SESSION['delete'])) //checking whether the session is set or not
+                {
+                    echo $_SESSION['delete']; //Displaying Session Message
+                    unset($_SESSION['delete']); //removing the session message
+                    
+                }
+
             ?>
             <br><br ><br>
 
@@ -77,7 +86,8 @@
                 <td><?php echo $username ?></td>
                 <td >
                 <a href="#" class="btn-secondary">Update Admin</a>
-                <a href="#" class="btn-danger">Delete Admin</a>
+                <a href="<?php echo SITEURL;?>admin/deleteadmin.php?id=<?php echo $id ?>" class="btn-danger">Delete Admin</a>
+                
                 </td>
               </tr>
                         <?php
